@@ -17,15 +17,15 @@ ActiveRecord::Schema.define(version: 20150417152138) do
   enable_extension "plpgsql"
 
   create_table "favorites", force: :cascade do |t|
-    t.string "title"
+    t.integer "movie_id"
+    t.string  "title"
   end
 
   create_table "movies", force: :cascade do |t|
-    t.integer "favorite_id"
-    t.string  "title"
-    t.string  "year"
-    t.string  "poster_url"
-    t.string  "omdb_id"
+    t.string "title"
+    t.string "year"
+    t.string "poster_url"
+    t.string "omdb_id"
   end
 
 end

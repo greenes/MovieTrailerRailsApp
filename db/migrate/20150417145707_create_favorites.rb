@@ -1,7 +1,7 @@
 class CreateFavorites < ActiveRecord::Migration
   def change
     create_table :favorites do |t|
-      t.string :title
+      t.belongs_to :movie
     end
   end
 end
