@@ -2,5 +2,6 @@
 
 
     <%@favorites.each do |f| %></h1>
-        <h2><%= f.title %> </h2>
+
+        <h2><%= link_to "#{f.title}", movie_path(f.movie_id) %> </h2>
     <%end%>

@@ -1,9 +1,9 @@
 class FavoritesController < ApplicationController
 
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def index
-    @favorites = Favorite.all
+    @favorites = current_user.favorites
   end
 
   def show
@@ -15,7 +15,7 @@ class FavoritesController < ApplicationController
   end
 
   def create
-    @favorite = Favorite.new(favorite_params)
+    @favorite = current_user.favorites.new(favorite_params)
       if @favorite.save
         redirect_to @favorite
       else
