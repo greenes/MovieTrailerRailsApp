@@ -1,0 +1,5 @@
+<p><%= form_tag "/movies", method: "get" do %>
+  <%= label_tag(:search, "Search for Movies:") %>
+  <%= text_field_tag(:search) %>
+  <%= submit_tag("Search") %>
+<% end %></p>
