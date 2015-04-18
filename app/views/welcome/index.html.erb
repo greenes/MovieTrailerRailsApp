@@ -1,0 +1,9 @@
+<%= render 'form' %>
+
+<%=link_to "add your movie own to favorites", new_movie_path%>
+
+
+    <%@movies.each do |m| %></h1>
+
+        <h2><%= link_to "#{m.title}", movie_path(f.movie_id) %> </h2>
+    <%end%>

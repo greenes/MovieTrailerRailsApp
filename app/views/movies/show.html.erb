@@ -1,0 +1,18 @@
+<p><%=link_to "home", root_path%></p>
+
+<h3>Search Results</h3>
+
+<%= @title %>
+<br>
+<img src="<%=@poster%>">
+<br>
+<%= @year %>
+<br>
+<%= @actors%>
+<br>
+<%= @plot%>
+<br>
+
+
+
+<p><%= button_to "Save to favorites!", movies_path %></p>

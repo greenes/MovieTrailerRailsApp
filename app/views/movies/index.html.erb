@@ -1,1 +1,18 @@
-<%= render 'form' %>
+
+
+
+<%= @title %>
+<br>
+<img src="<%=@poster%>">
+<br>
+<%= @year %>
+<br>
+<%= @actors%>
+<br>
+<%= @plot%>
+<br>
+
+
+<p><%=button_to "home", root_path%></p>
+
+<p><%= button_to "Save to favorites!", movies_path %></p>
